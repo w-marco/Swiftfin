@@ -54,7 +54,9 @@ jobs:
         run: mkdir -p build/Payload
  
       - name: Copy App to Payload
-        run: cp -r build/derived_data/Build/Products/Release-tvos/"Swiftfin tvOS.app" build/Payload
+        run: |
+          find build/derived_data/Build/Products/*
+          cp -r build/derived_data/Build/Products/Release-tvos/"Swiftfin tvOS.app" build/Payload
  
       - name: Fake Code Sign the App
         run: ldid -S build/Payload/"Swiftfin tvOS.app"/"Swiftfin tvOS"
