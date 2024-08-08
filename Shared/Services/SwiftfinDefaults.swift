@@ -112,6 +112,7 @@ extension Defaults.Keys {
         static let showPosterLabels: Key<Bool> = UserKey("showPosterLabels", default: true)
         static let nextUpPosterType: Key<PosterDisplayType> = UserKey("nextUpPosterType", default: .portrait)
         static let recentlyAddedPosterType: Key<PosterDisplayType> = UserKey("recentlyAddedPosterType", default: .portrait)
+        static let showRecentlyAdded: Key<Bool> = UserKey("showRecentlyAdded", default: true)
         static let latestInLibraryPosterType: Key<PosterDisplayType> = UserKey("latestInLibraryPosterType", default: .portrait)
         static let shouldShowMissingSeasons: Key<Bool> = UserKey("shouldShowMissingSeasons", default: true)
         static let shouldShowMissingEpisodes: Key<Bool> = UserKey("shouldShowMissingEpisodes", default: true)
@@ -170,6 +171,8 @@ extension Defaults.Keys {
 
     enum VideoPlayer {
 
+        static let appMaximumBitrate: Key<PlaybackBitrate> = UserKey("appMaximumBitrate", default: .auto)
+        static let appMaximumBitrateTest: Key<PlaybackBitrateTestSize> = UserKey("appMaximumBitrateTest", default: .regular)
         static let autoPlayEnabled: Key<Bool> = UserKey("autoPlayEnabled", default: true)
         static let barActionButtons: Key<[VideoPlayerActionButton]> = UserKey(
             "barActionButtons",
